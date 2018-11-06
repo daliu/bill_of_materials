@@ -10,6 +10,19 @@ Make sure you have Python3, pip, and virtualenv
 > curl -X POST http://localhost:5000/create/ --header "Content-Type: application/json" -d '{"name": "phone", "color":"silver", "model": "iPhone"}'
 
 
+# To Update a Part Object:
+> curl -X PUT http://localhost:5000/update/<int:part_id>/ --header "Content-Type: application/json" -d 'DATA_DICTIONARY'
+E.g. DATA_DICTIONARY might look like '{"color": "orange"}'
+
+
+# To Delete a Part Object:
+###### WARNING: ANYONE CAN DELETE
+###### May want to install API key for permissions
+> curl -X DELETE http://localhost:5000/delete/<int:ID>/
+
+
+# Listing Parts:
+
 ### To list all parts in BoM:
 > curl -X GET http://localhost:5000/bom/
 
@@ -42,19 +55,10 @@ Make sure you have Python3, pip, and virtualenv
 ### To list all assemblies that contain a specific child part, either directly or indirectly (via a subassembly):
 > curl -X GET http://localhost:5000/dependencies/ID/
 
-### To Update a Part Object:
-> curl -X PUT http://localhost:5000/update/<int:part_id>/ --header "Content-Type: application/json" -d '{"color": "orange"}'
-
-# To Delete a Part Object:
-###### WARNING: ANYONE CAN DELETE
-###### May want to install API key for permissions
-> curl -X DELETE http://localhost:5000/delete/<int:ID>/
-
-
 
 # Future Improvements:
-# Instead of storing as a list, I should have used a dictionary of ID -> Obj in order to increase speed of access
-# Additionally, we should store static values until we add/update/delete values, at which point only then would we need to make updates to our relational "database".
-# Ultimately though, if we really wanted to be efficient, using a database management system would likely abstract-away solutions to our inefficient accessors and checking methods.
-# If we cannot abstract-away accessors to be more efficient, then at least we can take inspiration from common database management algorithms.
-# I didn't have enough time to implement these efficiency improvements, but they are blatant weaknesses and straightforward to implement.
+##### Instead of storing as a list, I should have used a dictionary of ID -> Obj in order to increase speed of access
+##### Additionally, we should store static values until we add/update/delete values, at which point only then would we need to make updates to our relational "database".
+##### Ultimately though, if we really wanted to be efficient, using a database management system would likely abstract-away solutions to our inefficient accessors and checking methods.
+##### If we cannot abstract-away accessors to be more efficient, then at least we can take inspiration from common database management algorithms.
+##### I didn't have enough time to implement these efficiency improvements, but they are blatant weaknesses and straightforward to implement.
