@@ -19,7 +19,7 @@ A manufactured product may be described with a Bill of Materials (a list of phys
 	- box bottom
 	- box insert (which holds the pen)
 
-Some parts may come in different colors (e.g. red, blue, black) to match the color of the ink in the cartridge, but different colors of pen may also use the same part (e.g. the spring). Different models of pen may use different parts for the same function (e.g. one model may have a plastic barrel, another may have a metal barrel).
+Some parts may come in different colors (e.g. red, blue, black) to match the color of the ink in the cartridge, but different colors of pen may also use the same part (e.g. the spring). Different models of pen may use different parts for the same function (e.g. one model may have a plastic barrel, another may have a metal barrel). 
 
 - Some parts come in different colors, to match color of ink in the cartridge
 - Different colors of pen may also have the same part
@@ -37,9 +37,7 @@ The assignment is to implement a JSON-based REST API to create, update, delete a
 
 - create a new part
 - add one or more parts as "children" to a "parent" part, which then becomes an assembly
-
 - remove one or more parts from an assembly
-
 - delete a part (thereby also deleting the part from its parent assemblies)
 
 
