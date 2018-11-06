@@ -112,7 +112,7 @@ def get_bom_max_id():
 
 @app.route('/')
 def index():
-    return "Index"
+    return "See README.md for usage of this API"
 
 ### POST Routes ###
 @app.route('/create/', methods=['POST'])

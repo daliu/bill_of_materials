@@ -1,9 +1,9 @@
 
 # To start the server:
-Make sure you have Python3, pip, and virtualenv
-`source venv/bin/activate` to start the virtual environment
-`pip install -r requirements.txt`
-`python app.py` (Server should be running on localhost:5000)
+Make sure you have Python3, pip, and virtualenv  
+`source venv/bin/activate` to start the virtual environment  
+`pip install -r requirements.txt`  and finally,
+`python app.py` (Server should be running on localhost:5000)  
 
 ## Note: When using curl, make sure URLs always end in backslash
 
